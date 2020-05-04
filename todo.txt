@@ -1,0 +1,5 @@
+./instAllRacketPkgs.sh
+# Change racket version:
+cloc --sql=res.sql ~/.racket/7.6/pkgs
+sqlite3 racketDB.db < res.sql
+dbeaver racketDB.db
